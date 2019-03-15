@@ -24,6 +24,8 @@ const getLoadDuration = (page, options) => {
   )
 }
 
+// To measure actions within the same page (no redirect)
+// Not currently used in the project
 const getActionDuration = page => {
   return getDifferenceOfMetrics(page, 'requestStart', 'responseEnd')
 }
