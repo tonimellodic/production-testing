@@ -12,20 +12,22 @@ describe('google', () => {
     return console.log(`google page took ${duration}s to ${action}`)
   }
 
-  it('reports google page load time', () => {
+  it('reports google page load time', done => {
     return googlePage
       .goto()
       .then(googlePage.waitForPageLoaded)
       .then(() => getLoadDuration(page, googlePage.options))
       .then(duration => reportMetrics(duration, 'load'))
+      .then(done)
   })
 
-  // TODO: Expect search page to appear
-  it('reports google search time', () => {
+  it('reports google search time', done => {
     return googlePage
       .goto()
       .then(() => googlePage.search('test search'))
+      .then(googlePage.waitForResults)
       .then(() => getLoadDuration(page, googlePage.options))
-      .then(duration => reportMetrics(duration, 'search'))
+      .then(duration => reportMetrics(duration, 'find results'))
+      .then(done)
   })
 })
