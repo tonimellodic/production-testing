@@ -27,7 +27,7 @@
   "jest": {
     "preset": "jest-puppeteer",
     "setupFilesAfterEnv": [
-      "<rootDir>/test/support/config.js"
+      "<rootDir>/config.js"
     ]
   },
   "lint-staged": {
