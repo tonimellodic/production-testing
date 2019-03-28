@@ -1,5 +1,5 @@
 # synthetic-monitoring
-Obtaining synthetic metrics using puppeteer and jest
+Production testing using puppeteer and jest
 
 ## Getting Started
 

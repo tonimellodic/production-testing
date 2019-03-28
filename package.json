@@ -1,7 +1,7 @@
 {
   "name": "production-testing",
   "version": "0.0.1",
-  "description": "Obtaining synthetic metrics using puppeteer and jest",
+  "description": "Production testing using puppeteer and jest",
   "license": "Apache-2.0",
   "scripts": {
     "test": "yarn jest test/*test.js --maxWorkers 10",
