@@ -4,7 +4,7 @@ const {
   getActionDuration
 } = require('../src/metrics/page_metrics')
 
-describe('google', () => {
+describe('Google metrics', () => {
   const options = { timeout: 5000 }
   const googlePage = new GooglePage(page, options)
 
