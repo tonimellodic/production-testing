@@ -1,4 +1,4 @@
-# synthetic-monitoring
+# production-testing
 Production testing using puppeteer and jest
 
 ## Getting Started
