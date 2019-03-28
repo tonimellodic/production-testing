@@ -1,5 +1,5 @@
 {
-  "name": "synthetic-monitoring",
+  "name": "production-testing",
   "version": "0.0.1",
   "description": "Obtaining synthetic metrics using puppeteer and jest",
   "license": "Apache-2.0",
