@@ -5,7 +5,7 @@ const {
 } = require('../src/metrics/page_metrics')
 
 describe('google', () => {
-  const options = { timeout: 20000 }
+  const options = { timeout: 5000 }
   const googlePage = new GooglePage(page, options)
 
   const reportMetrics = (duration, action) => {
@@ -21,11 +21,19 @@ describe('google', () => {
       .then(done)
   })
 
+  it('reports google suggest time', done => {
+    return googlePage
+      .goto()
+      .then(() => googlePage.suggest('test suggest'))
+      .then(() => getActionDuration(page))
+      .then(duration => reportMetrics(duration, 'suggest'))
+      .then(done)
+  })
+
   it('reports google search time', done => {
     return googlePage
       .goto()
       .then(() => googlePage.search('test search'))
-      .then(googlePage.waitForResults)
       .then(() => getLoadDuration(page, googlePage.options))
       .then(duration => reportMetrics(duration, 'find results'))
       .then(done)
