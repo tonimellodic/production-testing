@@ -23,7 +23,7 @@ yarn
 To run the tests:
 
 ```bash
-yarn start
+yarn test
 ```
 
 `jest` can be used to run a single test:

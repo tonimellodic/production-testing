@@ -10,4 +10,18 @@ describe('Google smoke test', () => {
       .then(googlePage.waitForPageLoaded)
       .then(() => done(), err => done.fail(err))
   })
+
+  it('suggests searches', done => {
+    return googlePage
+      .goto()
+      .then(() => googlePage.suggest('test suggest'))
+      .then(() => done(), err => done.fail(err))
+  })
+
+  it('shows search results', done => {
+    return googlePage
+      .goto()
+      .then(() => googlePage.search('test search'))
+      .then(() => done(), err => done.fail(err))
+  })
 })
