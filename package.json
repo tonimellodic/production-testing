@@ -5,7 +5,9 @@
   "license": "Apache-2.0",
   "scripts": {
     "test": "yarn jest test/*test.js --maxWorkers 10",
-    "unit-test": "UNIT=true yarn jest spec.js --maxWorkers 10"
+    "unit-test": "UNIT=true yarn jest spec.js --maxWorkers 10",
+    "smoke": "yarn jest test/*smoke*.js  --maxWorkers 10",
+    "metrics": "yarn jest test/*metrics*.js  --maxWorkers 10"
   },
   "husky": {
     "hooks": {

@@ -20,16 +20,22 @@ yarn
 
 ### Running the tests
 
-To run the tests:
+To run all the tests:
 
 ```bash
 yarn test
 ```
 
-`jest` can be used to run a single test:
+To run smoke tests only:
 
 ```bash
-yarn jest <test_name>
+yarn smoke
+```
+
+To run metrics only:
+
+```bash
+yarn metrics
 ```
 
 #### Unit tests
